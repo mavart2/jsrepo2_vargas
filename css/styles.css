@@ -1,3 +1,30 @@
+form {
+   
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /*Hacequeelpaddingyelbordeseincluyanenelanchototal*/:;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
 .container{
     background-color:aqua;
     padding: 20px;
@@ -11,6 +38,7 @@
 }
 .container3{
     background-color:rgb(251, 252, 252);padding: 20px;
+    padding: 20px;
     width: 300px;
     margin-left: 8.5%;
     border-radius: 9px;

@@ -6,7 +6,7 @@
 // console.log(document.all[11]);
 // console.log(document.forms[0]);
 
-const btn =  document.getElementById("agregar")
+/*const btn =  document.getElementById("agregar")
   const container = document.getElementById("container")
   
   btn.addEventListener("click", ()=>{
@@ -21,7 +21,54 @@ const btn =  document.getElementById("agregar")
   <p>${tarea}</p>
   `
   container.appendChild(newCard)
-  })
+  })*/
+    
+   // Obtener el formulario y el campo de texto
+   let formulario = document.getElementById('miFormulario');
+   let campoDeTexto = document.getElementById('miCampoDeTexto');
+   let campoDeTexto2 = document.getElementById('miCampoDeTexto2');
+   let contenedorDatos = document.getElementById('datosDelFormulario');
+
+   // Agregar un evento de escucha al envío del formulario
+   formulario.addEventListener('submit', function(event) {
+       // Prevenir el comportamiento por defecto del formulario (enviar a una página diferente)
+       event.preventDefault();
+
+       // Obtener el valor del campo de texto
+       let valor1 = campoDeTexto.value;
+       let valor2 = campoDeTexto2.value;
+       
+       // Guardar el nombre y actividad en localStorage
+    localStorage.setItem("nombre", valor1);
+    localStorage.setItem("actividad", valor2);
+       
+    // HTML 
+       let parrafo1 = document.createElement('p');
+       parrafo1.textContent = 'Nombre: ' + valor1;
+
+       let parrafo2 = document.createElement('p');
+       parrafo2.textContent = 'Actividad: ' + valor2;
+
+       // Limpiar el contenido anterior del contenedor
+       contenedorDatos.innerHTML = '';
+       
+       
+
+        // Agregar los elementos al contenedor
+        contenedorDatos.appendChild(parrafo1);
+        contenedorDatos.appendChild(parrafo2);
+
+        campoDeTexto.value = '';
+       campoDeTexto2.value = '';
+   });
+
+
+
+
+
+       
+
+       
 
 //getElementById()
 console.log(document.getElementById('header-title'))
@@ -57,15 +104,15 @@ main.style.backgroundColor = 'white'
 let titulos = document.querySelectorAll('.title')
 titulos[0].textContent='Agrega Colores o lo que quieras...'
 
-let boton = document.getElementById("agregar");   //crear un boton en html
+/*let boton = document.getElementById("agregar");   //crear un boton en html
 boton.addEventListener("click", function() {
     console.log("¡Hiciste clic en el botón!");
     alert("evento detectado, mira la consola")
-  });
+  });*/
 
 //agregar colores o elementos a la lista
 
-    let form = document.getElementById('formAgregar')
+    let form2 = document.getElementById('formAgregar')
     let lista = document.getElementById('items')
   
     main.addEventListener('submit', agregarItem);
@@ -132,7 +179,10 @@ boton.addEventListener("click", function() {
         
 
     }
+
     
+    
+
     
 
 
